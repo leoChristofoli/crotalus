@@ -1,0 +1,125 @@
+{% load static i18n %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}crotalus{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {% block css %}
+    <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'vendors/orange/css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'vendors/orange/css/icomoon.css' %}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{% static 'vendors/orange/css/bootstrap.css' %}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{% static 'vendors/orange/css/style.css' %}">
+  
+    <!-- Modernizr JS -->
+    <script src="{% static 'vendors/orange/js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- This file stores project-specific CSS -->
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+    
+    {% endblock %}
+
+  </head>
+
+  <body>
+
+    <div class="fh5co-loader"></div>
+    
+    <div id="page">
+      <nav class="fh5co-nav" role="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="left-menu text-right menu-1">
+              <ul>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown">
+                  <a href="services.html">Services</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">eCommerce</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">API</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="logo text-center">
+              <div id="fh5co-logo"><a href="index.html">Orange.</a></div>
+            </div>
+            <div class="right-menu text-left menu-1">
+              <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="has-dropdown">
+                  <a href="#">Tools</a>
+                  <ul class="dropdown">
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">Sass</a></li>
+                    <li><a href="#">jQuery</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li class="btn-cta"><a href="#"><span>Login</span></a></li> -->
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </nav>
+
+      {% if messages %}
+          {% for message in messages %}
+              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+          {% endfor %}
+      {% endif %}
+
+      {% block content %}
+        <p>Use this document as a way to quick start any new project.</p>
+      {% endblock content %}
+
+    </div> <!-- /page -->
+
+    {% block modal %}{% endblock modal %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+      <!-- jQuery -->
+      <script src="{% static 'vendors/orange/js/jquery.min.js' %}"></script>
+      <!-- jQuery Easing -->
+      <script src="{% static 'vendors/orange/js/jquery.easing.1.3.js' %}"></script>
+      <!-- Bootstrap -->
+      <script src="{% static 'vendors/orange/js/bootstrap.min.js' %}"></script>
+      <!-- Waypoints -->
+      <script src="{% static 'vendors/orange/js/jquery.waypoints.min.js' %}"></script>
+      <!-- Main -->
+      <script src="{% static 'vendors/orange/js/main.js' %}"></script>
+      <!-- place project specific Javascript in this file -->
+      
+      <script src="{% static 'js/project.js' %}"></script>
+      
+
+    {% endblock javascript %}
+  </body>
+</html>
+ 
