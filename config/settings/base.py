@@ -56,6 +56,7 @@ LOCAL_APPS = [
     # custom users app
     'crotalus.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'contact.apps.ContactConfig'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
