@@ -77,9 +77,9 @@ DATABASES = {
         'NAME': 'crotalus',
         'USER': 'postgres',
         'PASSWORD': '@#Seg01',
-        # 'HOST': '169.6.233.45',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': '169.6.233.45',
+        # 'HOST': 'localhost',
+        'PORT': '5423',
     },
     'file': {
         'ENGINE': 'django.db.backends.sqlite3',

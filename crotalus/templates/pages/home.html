@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);">
@@ -9,7 +10,7 @@
                 <div class="display-t">
                     <div class="display-tc animate-box" data-animate-effect="fadeIn">
                         <h1>We Help to Build Your Site</h1>
-                        <h2>Free html5 templates Made by <a href="{% url 'contact:with-email' email='abc@yat.com' %}" target="_blank">freehtml5.co</a></h2>
+                        <h2>Free html5 templates Made by <a href="#" target="_blank">freehtml5.co</a></h2>
                         <div class="row">
                             <form action="/contact/" method="POST" class="form-inline" id="fh5co-header-subscribe">
                                 {% csrf_token %}
@@ -34,33 +35,83 @@
             <div class="col-md-4 col-sm-4">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="icon-eye"></i>
+                        <i class="fas fa-camera-retro fa-3x" style="color:#F36363"></i>
                     </span>
-                    <h3>Retina Ready</h3>
+                    <h3>Blog</h3>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="icon-command"></i>
+                        <i class="fas fa-th fa-3x" style="color:#F36363"></i>
                     </span>
-                    <h3>Fully Responsive</h3>
+                    <h3>Portifólio</h3>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="feature-center animate-box" data-animate-effect="fadeIn">
                     <span class="icon">
-                        <i class="icon-mouse"></i>
+                        <i class="fas fa-sitemap fa-3x" style="color:#F36363"></i>
                     </span>
-                    <h3>Web Starter</h3>
+                    <h3>Sistemas</h3>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="fh5co-project">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Our Project</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="http://frozen-ridge-33998.herokuapp.com/"><img src="{% static 'images/paper.png' %}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Frozen Ridge</h3>
+						<span>Blog</span>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Nature</h3>
+						<span>Application</span>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Green Island</h3>
+						<span>Branding</span>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-4.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Workspace</h3>
+						<span>Web Design</span>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-5.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Nature</h3>
+						<span>Application</span>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-6.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Green Island</h3>
+						<span>Branding</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
 
 <div id="fh5co-started">
     <div class="container">

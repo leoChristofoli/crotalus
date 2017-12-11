@@ -3,7 +3,7 @@ from django.db import models
 
 class Message(models.Model):
     email = models.EmailField(
-        blank=True
+        blank=False
     )
     first_name = models.CharField(
         max_length=255,

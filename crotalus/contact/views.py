@@ -6,19 +6,22 @@ from .forms import MessageForm
 from .models import Message
 
 def contact_view(request, email=None):
-    try:
-        print(request.POST['pre_email'])
-    except:
-        pass
+    print(request.method)
+    if request.method  == 'POST' and 'pre_email' in request.POST:
+        pre_email = request.POST['pre_email']
+        print(pre_email)
+    else:
+        pre_email = None
+
     print('contact')
     for i in Message.objects.all():
-        print(i.email, i.message)
+        print(i.email, i.__dict__)
     form = MessageForm(request.POST or None)
     if form.is_valid():
         obj = form.save(commit=False)
         print(obj)
         obj.save()
-        return HttpResponseRedirect(reverse('contact:home'))
+        return HttpResponseRedirect(reverse('contact:thankyou'))
 
     context = {
         'email': pre_email

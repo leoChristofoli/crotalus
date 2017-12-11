@@ -9,10 +9,11 @@ urlpatterns = [
         view=contact_views.contact_view,
         name='home'
         ),
+
     url(
-        regex=r'^(?P<email>[\w.@+-]+)/$',
-        view=contact_views.contact_view,
-        name='with-email'
-    ),
+        regex=r'^thankyou/$',
+        view=TemplateView.as_view(template_name='contact/thankyou.html'),
+        name='thankyou'
+        ),
 
 ]
