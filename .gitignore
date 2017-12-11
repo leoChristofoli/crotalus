@@ -220,3 +220,4 @@ pyvenv.cfg
 pip-selfcheck.json
 
 crotalus/media/
+*.pyc
